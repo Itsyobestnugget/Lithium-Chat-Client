@@ -5,14 +5,14 @@ Issue list
 
 | issue | Status |
 |-------|--------|
-| Javascript not responding | Reviewing |
+|  |  |
 
 Versions
 
 | Platform | Support |
 |---------|---------|
 | Web | Full (computer only) |
-| Standalone (html) | Full (computer only) |
+| Standalone (html) | testing (computer only) |
 | Exe | none |
 | Apple Computer(macOS) | none |
 | Android Mobile | none |

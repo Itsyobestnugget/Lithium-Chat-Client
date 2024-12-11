@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<head>
+  <link href="client.css" rel="stylesheet" />
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+  />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0" />
+  <script src="client.js"></script>
+  <title>Lithium Dev Chat Client</title>
+</head>
+<!-- so? what is the change. Oh yeah! i havent made it yet. but keep following me -->
+<body>
+  <main>
+    <div class="viewport_sidebar">
+      &nbsp;<img src="lios-flat.svg" style="height: auto; width: 150px;" />
+      <p>
+        &nbsp;&nbsp;Lukas - LSTV
+        <!--Eg Lukas - LSTV or Landan - Skip-->
+      </p>
+      <a href="" style="text-decoration: none;">&nbsp;&nbsp;CONSOLE - System</a>
+    </div>
+    
+    <div class="viewport_ChatWindow">
+      <div class="header">
+        <h1 class="ld">&nbsp;Lithium DEV</h1>
+      </div>
+      <div class="chatContent">
+        <p id="nullchats" class="nochats">Its empty in here...</p>
+      </div>
+      <div class="viewport_messenger" hidden>
+        <input
+          type="text"
+          class="input"
+          id="typer"
+          placeholder="Type a message here..."
+          required
+          maxlength="10000"
+          multiple
+        />&nbsp;&nbsp;
+        <button class="attach" id="attach" hidden>
+          <i class="bi-link-45deg" style="font-size: 40px;"></i></button
+        >&nbsp;&nbsp;
+        <button class="send" type="button" onclick="client.send()">
+          <i class="bi-send" id="send" style="font-size: 35px;"></i>
+        </button>
+      </div>
+    </div>
+    <div id="login" class="login_signup" style="display: none;">
+      <h1>Its no fun without an account (you dont have a life haha)</h1>
+      <img src="uhavenolife.png">
+      <p>Login to your LSTV Account to join the fun</p>
+      <div id="LSTVLogin" onclick="login()" class="LSTVButton">
+        <img src="lstv.svg" style="height: 25px; width: auto;"><p>Sign in with LSTV Account</p> <!-- clicked it and logged in. doesnt go away
+        -->
+    </div><br>
+    <!-- like the window is stuck? No Class="Login_signup" doesnt exit so i cant chat
+     then its not done. yes the link works fine props to u *clap clap* seriously the design is rly good.-->
+     <!-- oh that well yeah that isnt done yet -->
+      <!-- i was taklking aobut the link -->
+       
+    </div>
+  </main>
+</body><!--Hows it going? -->
+
+<!-- It works but its not very secure -->
+
+<!--
+ In other words, since the client is a local file, there is no way to validate if its really coming from the client or someone is faking it, since there is no url that could be checked
+so anyone can act as lithium chat
+What about assigning each file an id stored in a cache file thats like. encrypted or some shit? so it verifys.
+well doesnt it do that anyway after logging in? and im saying a device id. and like 0000000 is the client.
+
+at that point we dont need a login page at all and can just store our tokens manually to the cache
+there is no device id in browsers no like. the api reads the id sent. and it tells it if its a user or lithium
+and like. or maybie read the ip? or smth? im designing something for the login screen. i am checking every now and then.
+wel l the server cannot identify the cliin any way other that what the client sends themselves ohh...
+maybie.... hmm.. pondering..... i mean there must be some way how do other clients do it???
+like discord. or messenger???
+ yeah it does. a EXE thats a file. 
+so then why doesnt it say URL COULD NOT BE ACCESSED like with all the other iframes/webviews(android)
+discord doesnt run on a local file :)
+no, it doesnt.
+the discord app is a copy of a chrome browser, it just loads discord.com
+but its the same thing! an iframe is a browser that loads one link given to it.
+even if it loads the site then why doesnt it show URL NOT FOUND. because ive tried to display things like that before
+and it either says connection refused or url could not be accessed.
+You are. your saying it uses a copy of chrome to display it
+BUT HOW??? IT IS LITTERALLY A COPY OF A BROWSER??? SAME AS AN IFRAME?
+im finna crash out. so then do an iframe. its secure right? so we use an iframe. you said its more secure by being more 
+restrictive. so then use an iframe?
+THATS WHAT WE WERE GONNA DO? Host a web page. and have a local file???
+i wanted both because then if they blocked our page i would have a backup file. but i sttill wanted both?
+
+because its not an iframe... it just load the site
+no...
+what do you mean by that, why would it say that
+yeah because 90% of websites dont allow you to run them in an iframe
+but who is saying that discord uses an iframe
+discord uses a copy of chrome
+iframe !== chrome
+no, it is not...
+i dont know where you heard that but it is not
+an iframe element just loads a nested document
+its kinda like a new tabpage
+wym?
+
+well at that point we can just host the client on a server
+that would solvce all of that
+you wanted a local file.. not me :)
+if the
+ block bthe domain it wouldnt work anyway since the site still needs to make a connection to the server even if its a local file
+ not from what i can tell. i can still access gemini even though the sites blocked through butter
+ what in thee nasa supercomputer is an endpoint???
+ ohhhh. So then.
+ fine
+ lets just do a website and circle back to a local file later. when needed.
+ 
+
+soo what now?
+
+ but iframes are way more restricred than actual tabs, for security, since they are acessible by the parent 
+ because they use a different endpoint for their api than their frontend.
+ url to an API
+ i can tell. so they make it hard on purpose?
+ 
+ loging in on local files is complicated since its not usually recommended, since the server isnt able to verify where 
+ the request is coming from
+ its because if its a local file, the server doesnt know where the login is comming from, it could also be a hacker
+ when it is from an URL, the server can see that and verify htaht its the real site  
+ ohhhhhhhhh ok i get it now so a local file isnt a domain so it cant verify the code
+ but a url is so it can tell and verify?
+ im stupid :P so can we do a website wait
+ can i test it in a little bit and can you add the code for logging in i gtg for a lil ill leave the LS open you
+ can host it on my SSH if u want too. brb you can type and ill read when im back. ty for bearing with me while i
+ acted stupid hehe
+
+ yeah
+ i guess ill just be copying it from here to my server manually
+ okay sure
+ np :) im back
+ are your parents rich :^
+why? :DD
+ im wondering where you get all the money to do all this?
+ domains cost alot. servers cost alot, compputers cost alot. and  you seem to have no problem doing it all *shrug*
+ even more money *le gasp* its abuot 1020$ per year so not much *side eye*\
+ so just like i know a really nice guy who gives me free server acess :DDDDDDDDDDDDDDDDDDDDDDDDDDD *COUGH COUGH*
+ still dodging the question. are your parents rich?
+ really? Its a yes or a no. do you live in a nice house and have lots of funds or not. *i would be not* :DDDDDD\
+ tf yall homesteaded?
+ it means built a house/ become self sufficent  (grow gardens and use that for example)
+ were luckky we have a house *skull* economy here is shitty. i would tell you my sob story but im not gonna make you feel bad
+ dont wanna look like im using you because thats not nice and im not. besides its too long
+ 
+for servers i know a guy who co-owns a datacentre, so he gives me really good prices lmao :D
+no not really ig
+i mean we got a house but my parents built it themselves so they didnt pay as much
+
+what does that mean
+sure we gow a garden but 
+same here tbh
+i mean we arent rich by any means
+so you have a comfortable income? enough to survive with a little extra?
+
+your income is like free because idk you dont really have any services that your offering to buy yet.
+well yeah but thats 30 USD WAIT WHAT? CAN I HELP I DONT NEED PAYYMEENENNE
+mama fucker.
+
+i made 30$ yesterday for a website
+and ive got a 100$ offer now
+its for a tf2 trading bot. crypto is kinda shitty tbh. i dont make any money. i should start
+and everybody who i offer to do smth for on discord they block me :(((((
+is that softwarre? mama fucker. ooo. well maybie. but i was thinking more html and css design.
+oh your right. its not blocked :DDDD
+ill definitly look into it. i need to learn shaders is what i need. anyway we are so off topic its crazy
+you can 
+that thing i saw you doing with .frag you said it was bassically shaders.
+is it worse than js
+im not doing shaders :DDDDDDDDDDDD
+dont even try to sell me it wont work >:[
+not python *eye role* yes you cannn a basic I/O program :<
+
+shaders?
+uhhh, you will first need to learn coding with easier languages
+glsl is a pain
+10000%
+JS is a very easy language
+i mean it is, any other langauge is by far more difficult
+python is not a proper langauage
+its just for simple playing around but you cant make an actual program in it
+a basic one yeah but nothing you could use in production
+
+flask?
+transfers python to HTML/CSS/JS
+
+
+yeah, sure, as a proof of concept.
+but in the real world, its not really used
+since if it was, it would be very unpractical
+
+technically you can run python in the browser itself
+someone made a python engine in JS
+but nobody uses that since it would be very slow and not practical
+can we get back to coding the chat im bored ZZZZZ 
+look i get bored very easy.
+fine fine i get it. learn js and css and html and i can go somewhere. *sigh* ill try to learn but im not good at js
+you sure? you seem like it xD
+fair. so can you add it to your website after i finish making this.
+i can, but only in codespaces. or ssh but i need vscode to code. not nano yeah no shit sherlock *eyeroll*
+Your fucking telling me. i cant do shit crack on here. its SOOOO annoying ugh buttt my friend found an unblocked
+game site HEHEHHEHEHEHHE so i cant WAIT to test that. not here.i cant use proxys. tried,does it have discord in the link?
+they blocked the discord domain. fine lets try it.
+ alr
+
+bruh
+im trying to help you with your coding , its that you wont get very far with python, and other languages are different
+so if you wannt to get better youll need to start using "real" languages
+then youll understand 90% of other langauges since they are all similar
+
+how will it be synced?
+hmm
+well you can use ssh in vscode... if you had actual vscode
+this sucks
+
+wait you cant access dc rigile back for a similar reason
+no, a custom one
+no, i can choose a link
+it looks like a different site but it loads discord
+no not the domain, it proxies all discord requests through my sevrer
+
+but its been a while idk what state is it in
+ill try to find it
+i made a discord proxy a whjil
+
+guess what, i wasnt born a pro :)ourney
+xD
+it also took me a while, i am basically coding 24/7 for years
+otherwise i would also suck
+if i can tell you something straight upm
+
+hmm
+if you want to do design you should definitely learn to work with figma
+yes used it together onece for some lios design
+its where i also made the concept
+
+its on the web and its free
+you can use it without downloading
+
+
+crap ive removed it from my backend
+ill need to find it in github history and reimplement it
+
+yay:)  alr
+alr
+
+
+wtf cant find it anywhere it must be a long time
+but i got the proxy code atlest so thatkl work ill just add the handleri think we
+but the payment is in LTC not direct cash
+crypto u gud?
+
+lukas?
+
+
+i mean sure call it shitty but i just made a profit out of thin air XDD
+i also dont rewally like it tho
+ -->
+
+<!-- 
+The login link:
+https://lstv.space/sso?app=41&ref=https://lithiumchaturl/&permissions=16
+and the server auto recieves it if it works?
+it redirects to a page
+which i just realized may be an issue if you run it locally
+yep. i think we need to have it redirect to a page that sends the login data to the client. like that post/smth system?
+nononononono the local file listens to an online page where the api sends it too and if the local file sees that
+the page recieved data it gets that data. so the local file just waits for the data.
+it will listen to the server and uh. maybie...
+idk your the networking whiz here. i just excel at design *shrug* :0
+maybie a ws? or we can do my original idea with the api in the static file ? i know its risky but
+only we will use static files right? and we dont need it to be a static file
+i can also probably setup a socket system with python and use it as a backend if you can figure that out? except my computer
+doesnt have pyuthon....
+well it cant send data to a local file
+but how will it know 
+that would be too complicated, there must be an easier way
+
+wait i got an idea
+yeah i think it should work
+if we open the login page in a new window that is controlled by the local file, it may be able to read the token directly
+we can try ig
+
+-->

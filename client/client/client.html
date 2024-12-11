@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<!--
+Yo u online????
+
+-->
+<head>
+    <link href="client.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <script src="client.js"></script>
+    <title>Lithium Chat Client</title>
+</head>
+<!-- hide on default. copy and change content -->
+<body>
+    <main>
+        <div class="viewport_sidebar">
+            &nbsp;<img src="lios-flat.svg" style="height: auto; width: 150px;">
+            <p>
+                &nbsp;&nbsp;
+                <!--Eg Lukas - LSTV or Landan - Skip-->
+            </p>
+        </div>
+        <div class="viewport_ChatWindow"> 
+            <div class="header">
+                <h1 class="ld">&nbsp;Lithium - Chat</h2>
+        </div>
+        <div id="chatContent">
+            <p id="nullchats" class="nochats">Its empty in here...</p>
+            <div id="message" class="message" hidden>
+                <time><!--Timestamp. Local time (eg lukases local time | Landans local time / {names}:1:00 am | Yours: 6:00 am)--></time>
+                <img src="USERPIC.SMTH" style="width: 100px; height: auto; border-radius: 50px;">
+                <p id="msgcontent" style="bottom: 55px; left: 5px;">&nbsp;&nbsp;Nope</p>
+                <a href="attachmentlink" download="smth" style="display: none;">{attachment}</a>
+            </div>
+            <div class="viewport_messenger" >
+              <input type="text" class="input" id="typer" placeholder="Type a message here..." required>&nbsp;&nbsp;
+              <button class="attach" id="attach" hidden><i class="bi-link-45deg" style="font-size: 40px;"></i></button>&nbsp;&nbsp;
+              <button class="send" type="button" onclick="addNewMessage()"><i class="bi-send" id="send" style="font-size: 35px;"></i></button>
+            </div>
+        </div>
+    </main>
+</body>
